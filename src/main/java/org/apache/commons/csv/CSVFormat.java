@@ -786,21 +786,25 @@ public final class CSVFormat implements Serializable {
         }
         return sb.toString();
     }
-                 if (isLineBreak(delimiter)) {
+                 if (isLineBreak(delimiter)) 
+                 {
             throw new IllegalArgumentException("The delimiter cannot be a line break");
         }
         
-        if (quoteCharacter != null && delimiter == quoteCharacter.charValue()) {
+        if (quoteCharacter != null && delimiter == quoteCharacter.charValue()) 
+        {
             throw new IllegalArgumentException("The quoteChar character and the delimiter cannot be the same ('" +
                     quoteCharacter + "')");
         }
 
-        if (escapeCharacter != null && delimiter == escapeCharacter.charValue()) {
+        if (escapeCharacter != null && delimiter == escapeCharacter.charValue())
+        {
             throw new IllegalArgumentException("The escape character and the delimiter cannot be the same ('" +
                     escapeCharacter + "')");
         }
 
-        if (commentMarker != null && delimiter == commentMarker.charValue()) {
+        if (commentMarker != null && delimiter == commentMarker.charValue()) 
+        {
             throw new IllegalArgumentException("The comment start character and the delimiter cannot be the same ('" +
                     commentMarker + "')");
         }
